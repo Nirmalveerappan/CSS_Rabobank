@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Grid Layout</title>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    .grid {
+      display: grid;
+      /* grid-template-columns: repeat(auto-fill, minmax(500px, 1fr)); */
+      grid-template-columns: 30% 1fr;
+      grid-gap: 1rem;
+      border: 1px solid blue;
+      height: calc(100% - 204px);
+    }
+
+    .grid>div {
+      background: #EDE7F6;
+      padding: 1.5rem;
+      border-radius: 1rem;
+    }
+
+    body {
+      margin: 0px;
+      font: 12px system-ui;
+    }
+
+    .logo {
+      background: url(./rabobank-logo-transparent.png) no-repeat center;
+      height: 120px;
+      background-size: 20% 100%;
+    }
+
+    footer {
+      height: 80px;
+      text-align: center;
+      display: inline-grid;
+      justify-items: center;
+      align-items: center;
+      width: -webkit-fill-available;
+      position: absolute;
+      bottom: 0;
+    }
+
+    header,
+    footer {
+      border: 1px solid black;
+    }
+
+    div.aside {
+      background: #cccccc;
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo"></div>
+  </header>
+  <div class="grid">
+    <div class="aside">
+      <ul>
+        <li><a href="#">Savings</a></li>
+        <li><a href="#">Investments</a></li>
+        <li><a href="#">Payments</a></li>
+      </ul>
+    </div>
+    <div class="content">Quibusdam, eos esse dolorum facere voluptatem eius, dolore quas totam aspernatur obcaecati
+      harum? Nihil
+      eligendi
+      eos minus odit minima earum incidunt rem fugit reprehenderit, molestiae possimus eveniet itaque laudantium
+      excepturi.</div>
+  </div>
+  <footer class="footer">Footer</footer>
+</body>
+
+</html>
