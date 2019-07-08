@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>CSS Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            position: relative;
+            margin: 0;
+            /* padding-bottom: 6rem; */
+            min-height: 100%;
+            color: black;
+            background-color: #f2f2f2;
+            font-family: "Helvetica Neue", Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        /* Style the header */
+        header {
+            padding: 5%;
+            text-align: center;
+            font-size: 35px;
+            color: white;
+            border: 1px solid blue;
+        }
+
+        /* Create two columns/boxes that floats next to each other */
+        nav {
+            float: left;
+            width: 30%;
+            height: -webkit-fill-available;
+            background: #ccc;
+            border: 1px solid #000;
+        }
+
+        /* Style the list inside the menu */
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            padding: 5px;
+        }
+
+        article {
+            float: left;
+            width: 70%;
+            background-color: #f1f1f1;
+            border: 1px solid #000;
+        }
+
+
+        article,
+        nav {
+            padding: 0 2%;
+        }
+
+        /* section {
+            position: absolute;
+        } */
+
+        /* Clear floats after the columns */
+        section:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        section {
+            border: 1px solid #000;
+            overflow-y: auto;
+            height: 700px
+        }
+
+        /* Style the footer */
+        footer {
+            padding: 1rem;
+            background-color: #efefef;
+            text-align: center;
+            border: 1px solid green;
+        }
+
+        article,
+        nav {
+            height: inherit
+        }
+
+        .logo {
+            background: url(./rabobank-logo-transparent.png) no-repeat center;
+            height: 120px;
+            background-size: 20% 100%;
+        }
+
+        /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+        @media only screen and (max-width: 600px) and (min-width: 320px) {
+
+            nav,
+            article {
+                width: 100%;
+                height: auto;
+            }
+
+            nav {
+                display: none;
+            }
+
+            footer {
+                position: sticky;
+                right: 0;
+                bottom: 0px;
+                left: 0;
+                padding: 1rem;
+                background-color: #efefef;
+                text-align: center;
+            }
+
+            /* 
+            body {
+                padding-bottom: 84px;
+            } */
+
+            .logo {
+                height: 60px;
+                background-size: 60% 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo"></div>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#">Savings</a></li>
+                <li><a href="#">Investments</a></li>
+                <li><a href="#">Payments</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <h1>London</h1>
+            <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a
+                metropolitan area of over 13 million inhabitants.</p>
+            <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going
+                back to its founding by the Romans, who named it Londinium.</p>
+            <h1>London</h1>
+            <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a
+                metropolitan area of over 13 million inhabitants.</p>
+            <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going
+                back to its founding by the Romans, who named it Londinium.</p>
+            <h1>London</h1>
+            <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a
+                metropolitan area of over 13 million inhabitants.</p>
+            <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going
+                back to its founding by the Romans, who named it Londinium.</p>
+
+            <h1>London</h1>
+            <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a
+                metropolitan area of over 13 million inhabitants.</p>
+            <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going
+                back to its founding by the Romans, who named it Londinium.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Footer</p>
+    </footer>
+
+</body>
+
+</html>
